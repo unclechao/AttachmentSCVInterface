@@ -11,7 +11,8 @@ namespace AttachmentSCVInterface.Common
     public static class Log
     {
         static Semaphore _sem = new Semaphore(1, 1);
-        static string FileLocation = "C:\\errorlog.txt";
+        //static string FileLocation = "C:\\errorlog.txt";
+        static string FileLocation = Environment.CurrentDirectory + "\\errorlog.txt";
         public static void LoadInfo(string info)
         {
             _sem.WaitOne();
